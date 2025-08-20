@@ -22,7 +22,7 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }} 
 
     - name: Login to Amanzone ECR
-      uses: aws-action/amazon-ecr-login@v2
+      uses: aws-actions/amazon-ecr-login@v2
       
 
     - name: Build the Docker image
