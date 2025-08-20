@@ -15,13 +15,13 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: docker login
-      run: echo "${{secrets.PASS}}" | docker login -u "${{secrets.USER}}" --password-stdin  
+      run: echo "${{ secrets.PASS }}" | docker login -u "${{ secrets.USER }}" --password-stdin  
 
 
     - name: Build the Docker image
-      run: docker build -t ${{secrets.USER}}/test01:latest .
+      run: docker build -t ${{ secrets.USER }}/test01:latest .
 
     - name: push image to dockerHUB
-      run: docker push {{secrets.USER}}/test01:lastest    
+      run: docker push {{ secrets.USER }}/test01:lastest    
 
    
