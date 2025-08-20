@@ -26,9 +26,9 @@ jobs:
       
 
     - name: Build the Docker image
-      run: docker build -t ${{ AWS_ACCOUNT_ID }}.dkr.ecr.${{ AWS_REGION }}.amazonaws.com/bawa0017:v1 .
+      run: docker build -t ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/bawa0017:v1 .
 
     - name: push image to dockerHUB
-      run: docker push "${{ AWS_ACCOUNT_ID }}".dkr.ecr.${{ AWS_REGION }}.amazonaws.com/bawa0017:v1    
+      run: docker push "${{ secrets.AWS_ACCOUNT_ID }}".dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/bawa0017:v1    
 
    
