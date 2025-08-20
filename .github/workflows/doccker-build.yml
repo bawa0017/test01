@@ -22,6 +22,6 @@ jobs:
       run: docker build -t ${{ secrets.USER }}/test01:latest .
 
     - name: push image to dockerHUB
-      run: docker push ${{ secrets.USER }}/test01:lastest    
+      run: docker push ${{ secrets.USER }}/test01:latest    
 
    
