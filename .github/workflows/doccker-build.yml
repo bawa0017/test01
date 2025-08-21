@@ -10,7 +10,7 @@ jobs:
 
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v4
@@ -19,9 +19,9 @@ jobs:
 
 
     - name: Build the Docker image
-      run: docker build -t ${{ secrets.USER }}/test01:latest .
+      run: docker build -t ${{ secrets.USER }}/test01:v2 .
 
     - name: push image to dockerHUB
-      run: docker push ${{ secrets.USER }}/test01:latest    
+      run: docker push ${{ secrets.USER }}/test01:v2    
 
    
